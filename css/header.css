@@ -16,7 +16,14 @@
   height: 40px;
   margin-left: 10px;
 }
-
+@media (min-width: 375) and (max-width: 575.98px) {
+  .logo {
+    width: 30px;
+    height: 20px;
+    margin-left: 5px;
+    border: 1px solid #000;
+  }
+}
 .logo img {
   vertical-align: middle;
 }
@@ -69,7 +76,6 @@ nav a {
   color: rgb(255, 255, 255);
   padding: 10px 1px;
   border-bottom: 1px solid #fff;
-  font-family: 微軟正黑體;
   font-weight: 600;
   padding-left: 10px;
 }
@@ -118,7 +124,6 @@ div.navright {
 .bt-buy {
   font-size: 16px;
   font-weight: 600;
-  font-family: 微軟正黑體;
   border-radius: 5px;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(157, 42, 42, 1);
@@ -133,12 +138,10 @@ div.navright {
 .bt-member {
   font-size: 16px;
   font-weight: 600;
-  font-family: 微軟正黑體;
   border-radius: 5px;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(157, 42, 42, 1);
   border: none;
-
   width: 100px;
   height: 40px;
   /* margin-right: 150px; */
@@ -150,11 +153,6 @@ button.bt-member > a {
   color: rgb(255, 255, 255);
 }
 
-@media (min-width: 1400px) {
-  nav {
-    padding-right: 20%;
-  }
-}
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   nav {
     padding-right: 22%;
@@ -182,11 +180,34 @@ button.bt-member > a {
   }
 }
 
-@media (max-width: 575.98px) {
-  nav {
-    padding-right: 30%;
-  }
+@media (min-width: 375) and (max-width: 575.98px) {
   div.navright {
-    right: 11%;
+    right: 30%;
+    top: 0;
+  }
+
+  .bt-buy {
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(157, 42, 42, 1);
+    border: none;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    justify-content: center;
+  }
+
+  .bt-member {
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(157, 42, 42, 1);
+    border: none;
+    width: 100px;
+    height: 40px;
   }
 }

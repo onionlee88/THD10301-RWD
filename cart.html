@@ -233,8 +233,7 @@
       padding: 10px;
       height: 200px;
       width: 300px;
-
-      border: 1px solid #000;
+      justify-content: space-between;
     }
 
 
@@ -252,10 +251,8 @@
     }
 
     div.quantity {
-
       justify-content: space-between;
       display: flex;
-
     }
 
 
@@ -276,8 +273,8 @@
 
 
     div.cards img.card-img {
-      height: 200px;
-      width: 200px;
+      height: 225px;
+      width: 100%;
       /* font-size: 0; */
     }
 
@@ -289,13 +286,118 @@
       gap: 20px;
     }
 
-
     div.cards div.group-2 {
       /* border: 1px solid #000; */
       display: flex;
       margin-bottom: 20px;
       gap: 20px;
     }
+
+
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      div.cards {
+        margin-left: 20%;
+
+      }
+
+      div.cards div.group-1 {
+        display: block;
+        /* width: 80%; */
+        margin: auto;
+        margin-bottom: 20px;
+      }
+
+      article.card {
+        margin-bottom: 20px;
+      }
+
+      .content_block {
+        width: 300px;
+
+      }
+
+      div.cards div.group-2 {
+        display: block;
+        width: 700px;
+        margin: auto;
+        margin-bottom: 20px;
+
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      div.cards {
+        width: 100%;
+      }
+
+      div.cards div.group-1 {
+        display: block;
+        width: 500px;
+        margin: auto;
+        margin-bottom: 20px;
+      }
+
+      article.card {
+        margin-bottom: 20px;
+      }
+
+      div.cards div.group-2 {
+        display: block;
+        width: 500px;
+        margin: auto;
+        margin-bottom: 20px;
+      }
+
+    }
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      div.cards {
+        width: 100%;
+      }
+
+      div.cards div.group-1 {
+        display: block;
+        width: 500px;
+        margin: auto;
+        margin-bottom: 20px;
+      }
+
+      article.card {
+        margin-bottom: 20px;
+      }
+
+      div.cards div.group-2 {
+        display: block;
+        width: 500px;
+        margin: auto;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      div.cards {
+        width: 100%;
+      }
+
+      div.cards div.group-1 {
+        display: block;
+        width: 450px;
+        margin: auto;
+        margin-bottom: 20px;
+      }
+
+      article.card {
+        margin-bottom: 20px;
+      }
+
+      div.cards div.group-2 {
+        display: block;
+        width: 450px;
+        margin: auto;
+        margin-bottom: 20px;
+      }
+    }
+
 
     div.content_block div.quantity {
       display: flex;
@@ -310,14 +412,11 @@
       font-weight: 600;
     }
 
-    /* div.content_block div.quantity p.price{
-              margin-left: 20px;
-            } */
-
-
     div.content_block div.quantity img.img-quantity {
       height: 40px;
     }
+
+
 
 
     /*========================================購買人資料============================================ */
@@ -452,6 +551,14 @@
       line-height: 35px;
     }
 
+    @media (min-width: 992px) and (max-width: 1199.98px) {}
+
+    @media (min-width: 768px) and (max-width: 991.98px) {}
+
+    @media (min-width: 576px) and (max-width: 767.98px) {}
+
+    @media (max-width: 575.98px) {}
+
     /*========================================收件人資料============================================ */
 
     h2.recipient {
@@ -512,7 +619,7 @@
 
     table.table-buytotal {
       border-radius: 10px;
-      background-color: rgba(255, 255, 255, 1);
+      background-color: rgb(255, 240, 173);
 
     }
 
@@ -525,6 +632,33 @@
       background-color: rgb(121, 218, 97);
 
     }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      div.buytotal {
+        font-size: 24px;
+      }
+    }
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      div.buytotal {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      div.buytotal {
+        line-height: 25px;
+        font-size: 16px;
+      }
+
+      input.input-next {
+        width: 200px;
+        font-size: 12px;
+
+      }
+    }
+
+
 
     /*========================================訂單備註============================================ */
 
@@ -694,6 +828,7 @@
         <article class="card">
           <a href="#" target="_blank" class="img_block"><img class="card-img" src="./image/飲食法/地中海/蜂蜜芥末烤雞腿義式番茄藜麥飯.jpg"
               alt="蜂蜜芥末烤雞腿義式番茄藜麥飯"></a>
+
           <div class="content_block">
             <div class="card1-h">
               <h1 class="car-24">飲食種類:地中海飲食</h1><br>
@@ -705,6 +840,7 @@
               <p>1</p><img class="img-quantity" src="./image/icon/減號.svg" alt="減號">
               <p class="price">NT$260</p>
             </div>
+
           </div>
         </article>
 
