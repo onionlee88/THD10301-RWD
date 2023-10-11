@@ -1,0 +1,187 @@
+#menu_control {
+  position: absolute;
+  z-index: -2;
+  opacity: 0;
+}
+
+.header {
+  height: 50px;
+  background-color: rgba(255, 166, 41, 1);
+  position: relative;
+  height: 60px;
+}
+
+.logo {
+  width: 60px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.logo img {
+  vertical-align: middle;
+}
+.menu_btn {
+  width: 40px;
+  height: 40px;
+  background-color: #5a5a5a;
+  display: block;
+  position: absolute;
+  border-radius: 2px;
+  top: 10px;
+  right: 5px;
+}
+
+.menu_btn span {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  display: block;
+  overflow: hidden;
+}
+
+.menu_btn::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 2px;
+  width: 36px;
+  background-color: #aaa;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  box-shadow: 0px 8px 0px #aaa, 0px -8px 0px #aaa;
+}
+
+nav {
+  padding-right: 2%;
+  height: calc(100vh - 50px);
+  background-color: rgb(37, 186, 174);
+  position: absolute;
+  top: 60px;
+  left: -100%;
+  transition: 0.5s;
+  gap: 10px;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 10px 1px;
+  border-bottom: 1px solid #fff;
+  font-family: 微軟正黑體;
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+#menu_control:checked ~ .header nav {
+  left: 0;
+}
+
+@media screen and (min-width: 767.98px) {
+  .menu_btn {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav {
+    position: relative;
+    left: 0;
+    display: flex;
+    width: auto;
+    height: auto;
+    top: 0px;
+    background-color: transparent;
+    padding-top: 10px;
+  }
+
+  nav a {
+    border-bottom: none;
+  }
+}
+
+/* ==========購物車與會員登入========= */
+div.navright {
+  /* margin-right: 100px; */
+  padding-top: 10px;
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  right: 2%;
+  top: 0;
+}
+
+.bt-buy {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 微軟正黑體;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(157, 42, 42, 1);
+  border: none;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  justify-content: center;
+}
+
+.bt-member {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 微軟正黑體;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(157, 42, 42, 1);
+  border: none;
+
+  width: 100px;
+  height: 40px;
+  /* margin-right: 150px; */
+}
+
+a.car,
+button.bt-member > a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  nav {
+    padding-right: 22%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  nav {
+    padding-right: 25%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  nav {
+    padding-right: 30%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  nav {
+    padding-right: 30%;
+  }
+  div.navright {
+    right: 10%;
+    top: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  nav {
+    padding-right: 30%;
+  }
+  div.navright {
+    right: 11%;
+  }
+}

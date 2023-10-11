@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>健康餐選購</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+<link rel="stylesheet" href="./css/all.css">
+<link rel="stylesheet" href="./css/header.css">
+<link rel="stylesheet" href="./css/footer.css">
+<link rel="stylesheet" href="./Bootstrap/bootstrap-grid.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500&display=swap" rel="stylesheet">
+
+<style>
+  /*======================================== 首頁上方圖片============================================ */
+
+  div.img_block {
+    width: 100%;
+    height: 250px;
+
+    /* border: 3px solid #852121; */
+    background-image: url("./image/首頁/首頁上方圖片.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center 0;
+  }
+
+  /*======================================== main 種類選擇與商品搜尋============================================ */
+  h1.body {
+    color: rgba(157, 42, 42, 1);
+    margin-left: 5%;
+    font-size: 32px;
+    font-weight: 600;
+
+  }
+
+  h2.body {
+    color: rgba(157, 42, 42, 1);
+    margin: 20px 0px 20px 0px;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-left: 5%;
+  }
+
+  div.ch-eat {
+    display: flex;
+    /* border: 1px solid #000; */
+    justify-content: center;
+    /* border: 1px solid #000; */
+
+  }
+
+  div.ch-eat h1.body {
+    padding: 10px;
+  }
+
+  div.ch-eat h1.body {
+    /* padding-left: 20px; */
+    margin: 0px;
+
+  }
+
+  input.chose {
+    /* border: 1px solid #000; */
+    height: 20px;
+    width: 20px;
+    vertical-align: baseline;
+    vertical-align: middle;
+  }
+
+
+  div.ch-eat-1 {
+    color: rgba(92, 92, 92, 1);
+    font-weight: 700;
+    margin-left: 10px;
+    width: 160px;
+    /* border: 1px solid #000; */
+  }
+
+  div.ch-eat-2 {
+    color: rgba(92, 92, 92, 1);
+    font-weight: 700;
+    margin-left: 10px;
+    width: 130px;
+    /* border: 1px solid #000; */
+  }
+
+  div.ch-eat-3 {
+    color: rgba(92, 92, 92, 1);
+    font-weight: 700;
+    margin-left: 10px;
+    width: 135px;
+    /* border: 1px solid #000; */
+  }
+
+  div.ch-eat-1,
+  div.ch-eat-2,
+  div.ch-eat-3,
+  span.ch-p {
+    font-size: 28px;
+    vertical-align: middle;
+
+  }
+
+  span.span-ch-eat {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #000; */
+
+  }
+
+  div.search {
+    padding: 10px;
+    display: flex;
+    width: 315px;
+    margin: auto 0;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(92, 92, 92, 1);
+    background-color: rgba(255, 216, 79, 1);
+    align-items: center;
+    margin-left: 40px;
+  }
+
+  div.search p {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(92, 92, 92, 1);
+    width: 100px;
+  }
+
+  div.search img {
+
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 2px;
+  }
+
+  div.search input.search {
+    border: 2px solid rgba(92, 92, 92, 1);
+    background-color: rgba(245, 245, 245, 1);
+    width: 170px;
+    height: 30px;
+    margin-left: 5px;
+    border-radius: 6px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    span.span-ch-eat {
+      display: block;
+    }
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    span.span-ch-eat {
+      display: block;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    span.span-ch-eat {
+      display: block;
+      margin-top: 5px;
+    }
+
+    div.ch-eat {
+      display: block;
+      /* border: 1px solid #000; */
+      justify-content: center;
+    }
+
+    div.search {
+      padding: 10px;
+      display: flex;
+      width: 315px;
+      margin: auto 0;
+      height: 30px;
+      border-radius: 10px;
+      border: 2px solid rgba(92, 92, 92, 1);
+      background-color: rgba(255, 216, 79, 1);
+      align-items: center;
+      margin-top: 20px;
+
+    }
+  }
+
+
+  /*======================================== 卡片============================================ */
+
+  article.card a.img_block {
+    display: block;
+    font-size: 0;
+  }
+
+  article.card a.img_block>img {
+    max-width: 100%;
+    border-bottom: 4px solid rgba(255, 255, 255, 1);
+  }
+
+  article.card div.content_block {
+    padding: 10px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    /* 將主軸方向改為垂直方向 */
+    justify-content: space-between;
+    /* 將下方的 div 對齊至容器底部 */
+  }
+
+
+  article.card h1.car-24 {
+    margin: 0 0 15px 0;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  article.card p {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  main.main div.cards {
+    display: flex;
+    display: grid;
+    grid-template-columns: 280px 280px 280px;
+
+    margin: 0 auto;
+    gap: 40px;
+    justify-content: center;
+    border-bottom: 30px;
+  }
+
+  article.card {
+    /* border: 3px solid rgba(172, 40, 40, 1); */
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+    box-shadow: 5px 5px 10px;
+    width: 280px;
+
+  }
+
+  div.content_block div.quantity {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+  }
+
+  div.content_block div.quantity p {
+    margin: 0px;
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  div.content_block div.quantity p.price {
+    margin-left: 20px;
+  }
+
+
+  div.content_block div.quantity img.img-quantity {
+    height: 40px;
+  }
+
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    main.main div.cards {
+      grid-template-columns: 280px 280px;
+    }
+
+    article.card {
+      width: 280px;
+    }
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    main.main div.cards {
+      grid-template-columns: 270px 270px;
+    }
+
+    article.card {
+      width: 270px;
+      /* display: block; */
+    }
+
+    div.content_block div.quantity {
+      display: flex;
+      /* justify-content: space-between; */
+      align-items: center;
+      gap: 5px;
+      padding: 10px;
+    }
+
+    div.content_block div.quantity p {
+      margin: 0px;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    div.content_block div.quantity p.price {
+      margin-left: 20px;
+    }
+
+
+    div.content_block div.quantity img.img-quantity {
+      height: 30px;
+    }
+
+  }
+
+  @media (max-width: 575.98px) {
+    main.main div.cards {
+      grid-template-columns: 420px;
+    }
+
+    article.card {
+      width: 420px;
+
+      display: flex;
+    }
+
+    article.card a.img_block img {
+      width: 100%;
+      height: 100%;
+    }
+
+    div.content_block div.quantity img.img-quantity {
+      height: 30px;
+    }
+  }
+
+
+  /*========================== 飲食種類介紹======================== */
+
+
+
+  h3.h3 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  main.main {
+    padding: 30px;
+  }
+
+  div.three span {
+    margin-left: 20px;
+  }
+
+
+  /* 第一種 */
+  main.main div.threemethod div.eat-one {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  div.eat-one img {
+    margin-right: 20px;
+  }
+
+  div.eat-one span {
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 1);
+    line-height: 30px;
+    background-color: rgba(255, 216, 79, 1);
+    height: 100%;
+    margin: auto 0;
+    /* margin-left: 20px; */
+    /* width: calc(100% - 300px - 20px - 160px); */
+  }
+
+
+  main.main div.threemethod div.eat-one img {
+    width: 300px;
+    height: 300px;
+    border: 5px solid rgba(255, 166, 41, 1);
+    border-radius: 20px;
+  }
+
+  /* 第二種 */
+
+
+
+  div.three span.eat2 {
+    margin-right: 20px;
+    margin-left: 0px;
+    display: inline-block;
+  }
+
+
+  main.main div.threemethod div.eat-two {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  main.main div.threemethod div.eat-two img {
+    width: 300px;
+    height: 300px;
+    border: 5px solid rgba(255, 166, 41, 1);
+    border-radius: 20px;
+  }
+
+  div.eat-two span {
+
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 1);
+    line-height: 30px;
+    background-color: rgba(255, 216, 79, 1);
+    height: 280px;
+    margin: auto 0;
+    width: 100%;
+
+
+  }
+
+
+  /* 第三種 */
+
+
+  main.main div.threemethod div.eat-three {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  main.main div.threemethod div.eat-three img {
+    width: 300px;
+    height: 300px;
+    border: 5px solid rgba(255, 166, 41, 1);
+    border-radius: 20px;
+  }
+
+  div.eat-three span {
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 1);
+    line-height: 30px;
+    background-color: rgba(255, 216, 79, 1);
+    height: 350px;
+    margin-left: 20px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+
+    div.eat-one span,
+    div.eat-one span,
+    div.eat-three span {
+      display: block;
+    }
+
+    div.eat-one span,
+    div.eat-two span,
+    div.eat-three span {
+      margin-top: 20px;
+      height: 100%;
+    }
+
+    div.eat-two {
+      flex-direction: column-reverse;
+      flex-wrap: wrap;
+    }
+
+    div.eat-on img,
+    div.eat-two img,
+    div.eat-three img {
+      margin: auto
+    }
+  }
+
+
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+
+    div.eat-one span,
+    div.eat-two span,
+    div.eat-three span {
+      margin-top: 20px;
+      height: 100%;
+    }
+
+    div.eat-two {
+      flex-direction: column-reverse;
+    }
+
+    div.eat-on img,
+    div.eat-two img,
+    div.eat-three img {
+      margin: auto
+    }
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+
+    div.eat-one span,
+    div.eat-two span,
+    div.eat-three span {
+      margin-top: 20px;
+      height: 100%;
+    }
+
+    div.eat-two {
+      flex-direction: column-reverse;
+    }
+
+    div.eat-on img,
+    div.eat-two img,
+    div.eat-three img {
+      margin: auto
+    }
+  }
+
+  @media (max-width: 575.98px) {
+
+    div.eat-one span,
+    div.eat-two span,
+    div.eat-three span {
+      margin-top: 20px;
+      height: 100%;
+    }
+
+    div.eat-two {
+      flex-direction: column-reverse;
+    }
+
+    div.eat-on img,
+    div.eat-two img,
+    div.eat-three img {
+      margin: auto
+    }
+  }
+
+
+  /*======================================= 已購買清單 =========================*/
+
+  div.list-go {
+    border: 3px solid rgba(180, 51, 51, 1);
+    width: 90%;
+    display: flex;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: auto;
+  }
+
+  table.table-buytotal {
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: 20px;
+    width: 450px;
+  }
+
+  input.input-next {
+    border: 5px solid rgba(255, 216, 79, 1);
+    background-color: rgba(255, 166, 41, 1);
+    color: rgba(255, 255, 255, 1);
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+  }
+
+  /* 飲食種類介紹 */
+  p.content {
+    padding: 10px 0px 10px 10px;
+    padding-left: 10px;
+    font-size: 28px;
+  }
+
+
+
+
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+
+    div.list-go {
+      display: block;
+    }
+
+    input.input-next {
+      margin-top: 10px;
+    }
+
+  }
+
+  @media (max-width: 575.98px) {
+    div.list-go {
+      display: block;
+    }
+
+    input.input-next {
+      margin-top: 10px;
+    }
+
+    table.table-buytotal {
+      font-size: 16px;
+    }
+
+
+  }
+
+
+
+  /* =========== 麵包削 =========== */
+  div.breadcrumb {
+    /* border: 1px solid #000; */
+    padding: 5px 10px;
+    margin-top: 45px;
+    margin-left: 70px;
+    width: 200px;
+  }
+
+  div.breadcrumb ol.breadcrumb_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+  }
+
+  div.breadcrumb ol.breadcrumb_list>li {
+    /*   border: 1px solid red; */
+    display: inline-block;
+    color: gray;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+
+
+  /* 利用 ::before 擬似元素，創造斜線做為分隔 */
+  div.breadcrumb ol.breadcrumb_list>li::before {
+    content: " /";
+    font-size: 18px;
+    color: gray;
+    margin: 0 10px;
+  }
+
+  /* 第一個 li 元素，將 ::before 設定回來需要的 */
+  div.breadcrumb ol.breadcrumb_list>li:first-child::before {
+    display: none;
+  }
+
+
+  /* 基本文字樣式 */
+  div.breadcrumb ol.breadcrumb_list>li>a {
+    /*   border: 1px solid blue; */
+    text-decoration: none;
+    display: inline-block;
+    color: #007bff;
+
+  }
+
+  /* 滑動移過後改變文字顏色 */
+  div.breadcrumb ol.breadcrumb_list>li>a:hover {
+    color: #0056b3;
+  }
+
+  /* =========== 麵包削 =========== */
+  div.breadcrumb {
+    /* border: 1px solid #000; */
+    padding: 5px 10px;
+    margin-top: 45px;
+    margin-left: 70px;
+    width: 200px;
+  }
+
+  div.breadcrumb ol.breadcrumb_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+  }
+
+  div.breadcrumb ol.breadcrumb_list>li {
+    /*   border: 1px solid red; */
+    display: inline-block;
+    color: gray;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+
+
+  /* 利用 ::before 擬似元素，創造斜線做為分隔 */
+  div.breadcrumb ol.breadcrumb_list>li::before {
+    content: " /";
+    font-size: 18px;
+    color: gray;
+    margin: 0 10px;
+  }
+
+  /* 第一個 li 元素，將 ::before 設定回來需要的 */
+  div.breadcrumb ol.breadcrumb_list>li:first-child::before {
+    display: none;
+  }
+
+
+  /* 基本文字樣式 */
+  div.breadcrumb ol.breadcrumb_list>li>a {
+    /*   border: 1px solid blue; */
+    text-decoration: none;
+    display: inline-block;
+    color: #007bff;
+
+  }
+
+  /* 滑動移過後改變文字顏色 */
+  div.breadcrumb ol.breadcrumb_list>li>a:hover {
+    color: #0056b3;
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" name="" id="menu_control">
+
+  <div class="header">
+    <h1 class="logo">
+      <a href="./index.html"><img src="
+        ./image/icon/LOGO.png" href="index.html" alt="EHWlogo"></a>
+    </h1>
+
+    <label for="menu_control" class="menu_btn">
+      <span>選單</span>
+    </label>
+
+    <nav>
+      <a href="share.html">食譜分享</a>
+      <a href="story.html">品牌故事</a>
+      <a href="Calorie.html">卡路里計算</a>
+      <a href="healthfood.html">飲食方式</a>
+    </nav>
+
+    <div class="navright">
+      <a class="car" href="cart.html"> <button class="bt-buy"> <img class="bt-img" src="./image/icon/buy.png"
+            alt="購物車">購物車 </button></a>
+      <a href="member.html"><button class="bt-member" src=會員登入.html>會員註冊</button></a>
+    </div>
+
+  </div>
+
+
+  <div class="img_block"></div>
+
+
+  <main class="main">
+
+
+    <h1 class="body">種類選擇:</h1>
+    <div class="ch-eat">
+
+      <span class="span-ch-eat">
+        <div class="ch-eat-1"><input type="checkbox" class="chose"><span class="ch-p">地中海飲食</span></div>
+        <div class="ch-eat-2"><input type="checkbox" class="chose"><span class="ch-p">211飲食</span></div>
+        <div class="ch-eat-3"><input type="checkbox" class="chose"><span class="ch-p">得舒飲食</span></div>
+      </span>
+
+      <div class="search">
+        <p>商品搜尋</p><img src="./image/icon/search.svg" alt="search">
+        <input class="search" type="text">
+      </div>
+
+    </div>
+
+
+
+
+    <div class="cards">
+
+      <article class="card">
+        <a href="#" target="_blank" class="img_block"><img src="./image/飲食法/地中海/蜂蜜芥末烤雞腿義式番茄藜麥飯.jpg"
+            alt="蜂蜜芥末烤雞腿義式番茄藜麥飯"></a>
+        <div class="content_block">
+          <div class="content">
+            <h1 class="car-24">飲食種類:地中海飲食</h1>
+            <p>料理名稱:<br>
+              蜂蜜芥末烤雞腿義式番茄藜麥飯</p>
+          </div>
+
+          <div class="quantity"><img class="img-quantity" src="./image/icon/加號.svg" alt="加號">
+            <p>1</p><img class="img-quantity" src="./image/icon/減號.svg" alt="減號">
+            <p class="price">NT$260</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <a href="#" target="_blank" class="img_block"><img src="./image/飲食法/211料理/韓式醬味梅花豬肯瓊鷹嘴豆飯與日式煮物.jpg"
+            alt="韓式醬味梅花豬肯瓊鷹嘴豆飯與日式煮物"></a>
+        <div class="content_block">
+          <div class="content">
+            <h1 class="car-24">飲食種類:211飲食</h1>
+            <p>料理名稱:<br>
+              韓式醬味梅花豬肯瓊鷹嘴豆飯與
+              日式煮物</p>
+          </div>
+
+          <div class="quantity"><img class="img-quantity" src="./image/icon/加號.svg" alt="加號">
+            <p>1</p><img class="img-quantity" src="./image/icon/減號.svg" alt="減號">
+            <p class="price">NT$260</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <a href="#" target="_blank" class="img_block"><img src="./image/飲食法/DASH/紐奧良香料鯖魚高麗菜豆薯飯.jpg"
+            alt="紐奧良香料鯖魚高麗菜豆薯飯"></a>
+        <div class="content_block">
+          <div class="content">
+            <h1 class="car-24">飲食種類:得舒飲食</h1>
+            <p>料理名稱:<br>
+              紐奧良香料鯖魚高麗菜豆薯飯</p>
+          </div>
+
+          <div class="quantity"><img class="img-quantity" src="./image/icon/加號.svg" alt="加號">
+            <p>1</p><img class="img-quantity" src="./image/icon/減號.svg" alt="減號">
+            <p class="price">NT$260</p>
+          </div>
+        </div>
+      </article>
+
+
+
+      <article class="card">
+        <a href="#" target="_blank" class="img_block"><img src="./image/飲食法/地中海/西西里風烤爐魚香菜檸檬地瓜糙米飯.jpg "
+            alt="西西里風烤爐魚香菜檸檬地瓜糙米飯"></a>
+        <div class="content_block">
+          <div class="content">
+            <h1 class="car-24">飲食種類:地中海飲食</h1>
+            <p>料理名稱:<br>
+              西西里風烤爐魚香菜檸檬地瓜糙米飯</p>
+          </div>
+
+          <div class="quantity"><img class="img-quantity" src="./image/icon/加號.svg" alt="加號">
+            <p>1</p><img class="img-quantity" src="./image/icon/減號.svg" alt="減號">
+            <p class="price">NT$260</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <a href="#" target="_blank" class="img_block"><img src="./image/飲食法/211料理/蜂蜜芥末烤雞腿麻油雞紫米與普羅旺斯燉菜.jpg"
+            alt="蜂蜜芥末烤雞腿麻油雞紫米與普羅旺斯燉菜"></a>
+        <div class="content_block">
+          <div class="content">
+            <h1 class="car-24">飲食種類:211飲食</h1>
+            <p>料理名稱:<br>
+              蜂蜜芥末烤雞腿麻油雞紫米與
+              普羅旺斯燉菜</p>
+          </div>
+
+          <div class="quantity"><img class="img-quantity" src="./image/icon/加號.svg" alt="加號">
+            <p>1</p><img class="img-quantity" src="./image/icon/減號.svg" alt="減號">
+            <p class="price">NT$260</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <a href="#" target="_blank" class="img_block"><img src="./image/飲食法/DASH/Masala雞胸高麗菜豆薯飯.jpg"
+            alt="Masala雞胸高麗菜豆薯飯"></a>
+        <div class="content_block">
+          <div class="content">
+            <h1 class="car-24">飲食種類:得舒飲食</h1>
+            <p>料理名稱:<br>
+              Masala雞胸高麗菜豆薯飯</p>
+          </div>
+
+          <div class="quantity"><img class="img-quantity" src="./image/icon/加號.svg" alt="加號">
+            <p>1</p><img class="img-quantity" src="./image/icon/減號.svg" alt="減號">
+            <p class="price">NT$260</p>
+          </div>
+        </div>
+      </article>
+    </div>
+    </div>
+
+
+    <div class="threemethod">
+      <h2 class="body">飲食種類介紹</h2>
+
+
+      <div class="three">
+
+        <div class="eat-one">
+          <img src="./image/飲食法/地中海-大圖.jpg" alt="">
+          <span>
+            <p class="content">地中海飲食</p>
+            <pre>
+                源自1940-1950年代地中海周邊地區，
+                強調攝取大量蔬菜水果，以橄欖油為主要脂肪來源，
+                天然乳製品加上適量的魚、蛋及家禽類，並攝取少量紅肉，
+                已連續5年被《美國新聞與世界報導》
+                （USNews&World Report）評選為整體最佳飲食方法冠軍，
+                同時也是最佳植物飲食和最易遵循飲食排行榜冠軍。</pre>
+          </span>
+        </div>
+
+        <div class="eat-two">
+          <span class="eat2">
+            <p class="content">「211餐盤飲食法」</p>
+            <pre>
+                是指每餐的蔬菜、全穀類、蛋白質佔餐盤比例2:1:1，
+                佔餐盤一半份量的蔬菜可增加飽足感，
+                同時不壓縮蛋白質的空閰，並選用全穀類，
+                減少食用精緻澱粉，除了作為減脂、減醣的入門飲食外，
+                也能作為運動後營養補充或是有控醣需求的人。</pre>
+          </span>
+          <img src="./image/飲食法/211健康餐-大圖.jpg" alt="">
+        </div>
+
+        <div class="eat-three"><img src="./image/飲食法/DASH-大圖.jpg" alt="">
+          <span>
+            <p class="content">得舒飲食</p>
+            <pre>
+                （Dietary Approaches to Stop Hypertension，DASH）
+                是目前醫學界推崇的一種降血壓的新飲食療法，
+                有別於傳統叫你什麼都不能吃的印象，
+                而是呼籲多吃一些健康且富含營養素的食物。
+                得舒飲食主要提倡「四高」，就是要攝取
+                「高鉀、高鎂、高鈣及高膳食纖維」，最後強調要吃好油，
+                多選擇一些富含不飽和脂肪酸的油脂如堅果種子類、
+                橄欖油、苦茶油、亞麻仁籽油等，盡量減少飽和脂肪，
+                以達到健康舒壓的效果。</pre>
+          </span>
+        </div>
+
+
+
+      </div>
+    </div>
+
+
+
+    <div class="list-go">
+
+      <table class="table-buytotal">
+        <caption class="buy">目前已購買產品:</caption>
+        <tr>
+          <td> 1.蜂蜜芥末烤雞腿義式番茄藜麥飯</td>
+          <td class="td2">-260</td>
+        </tr>
+        <tr>
+          <td> 2.紐奧良香料鯖魚高麗菜豆薯飯</td>
+          <td class="td2"> -260</td>
+        </tr>
+        <tr>
+          <td> 3.Masala雞胸高麗菜豆薯飯 </td>
+          <td class="td2">-260</td>
+        </tr>
+        <tr class="total">
+          <td>已累計金額:</td>
+          <td>NT$780</td>
+        </tr>
+
+      </table>
+
+      <input class="input-next" type="submit" value="前往購物車">
+
+    </div>
+
+
+
+  </main>
+
+
+  <footer class="footer">
+    <h3 class="ft_h3">聯絡我們</h3>
+    <ul class="footer_list">
+
+      <li class="ft_h3"> <img src="./image/icon/phone.svg" alt="電話:02-1234-5678">
+        <p>電話:02-1234-5678</p>
+      </li>
+      <li class="ft_h3"> <img src="./image/icon/instagram.svg" alt="e-mail:food@gmail.com">
+        <p>e-mail:healthyfood@gmail.com</p>
+      </li>
+      <li class="ft_h3"> <img src="./image/icon/e-mail.svg" alt="Eat_healthy_everyday">
+        <p>Eat_healthy_everyday</p>
+      </li>
+    </ul>
+    <h3 class="reference"> 本網站為緯育TibaMe前端工程師專業技術養成班THD103學員專題作品，本平台僅供學習、展示之用。若有侵權疑慮，您可以私訊 [緯育TibaMe] ，後續會由專人協助處理。
+      <br>參考資源: 常常好食、愛料理、中保無限。
+    </h3>
+
+  </footer>
+
+
+</body>
+
+</html>

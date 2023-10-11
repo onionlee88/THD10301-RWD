@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>會員註冊</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+  <link rel="stylesheet" href="./css/all.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./Bootstrap/bootstrap-grid.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500&display=swap" rel="stylesheet">
+
+  <style>
+    h1.h1 {
+      font-size: 28px;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    main.main {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    main.main div.top-1 {
+      display: flex;
+      gap: 10px;
+      /* border: 1px solid #000; */
+      height: 50px;
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 500px;
+      font-weight: 700;
+      font-size: 20px;
+      border-radius: 10px;
+      line-height: 35px;
+      margin: 20px auto;
+      color: rgba(255, 166, 41, 1);
+      background-color: rgba(217, 217, 217, 1);
+      top: 50%;
+      align-items: center;
+    }
+
+    main.main div.top-1 input {
+
+      border: 0px;
+      width: 300px;
+
+    }
+
+    div.top-1 input {
+      height: 25px;
+
+    }
+
+
+    form.form {
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    fieldset.fieldset {
+      border: 1px solid #000;
+    }
+
+    p.log-in {
+      color: rgba(250, 44, 44, 1);
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+      padding-left: 30%;
+
+    }
+
+    input.register {
+      width: 500px;
+      height: 80px;
+      height: 80px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 28px;
+      font-weight: 600;
+      border-radius: 20px;
+      color: rgba(174, 64, 64, 1);
+      background-color: rgba(255, 166, 41, 1);
+      border: 0px;
+    }
+
+    div.input-ft {
+      height: 50px;
+      margin-top: 20px;
+      margin-bottom: 60px;
+    }
+
+
+    input.ch-3 {
+      width: 200px;
+      height: 50px;
+      border-radius: 10px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 1);
+      font-weight: 600;
+      font-size: 20px;
+      background-color: rgba(255, 216, 79, 1);
+      border: 0px;
+
+    }
+
+    p.log-in a {
+      font-size: 24px;
+      text-decoration: none;
+      color: rgba(174, 64, 64, 1);
+    }
+
+    /* =========== 麵包削 =========== */
+    div.breadcrumb {
+      /* border: 1px solid #000; */
+      padding: 5px 10px;
+      margin-top: 45px;
+      margin-left: 70px;
+      width: 200px;
+    }
+
+    div.breadcrumb ol.breadcrumb_list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 0;
+    }
+
+    div.breadcrumb ol.breadcrumb_list>li {
+      /*   border: 1px solid red; */
+      display: inline-block;
+      color: gray;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+
+
+    /* 利用 ::before 擬似元素，創造斜線做為分隔 */
+    div.breadcrumb ol.breadcrumb_list>li::before {
+      content: " /";
+      font-size: 18px;
+      color: gray;
+      margin: 0 10px;
+    }
+
+    /* 第一個 li 元素，將 ::before 設定回來需要的 */
+    div.breadcrumb ol.breadcrumb_list>li:first-child::before {
+      display: none;
+    }
+
+
+    /* 基本文字樣式 */
+    div.breadcrumb ol.breadcrumb_list>li>a {
+      /*   border: 1px solid blue; */
+      text-decoration: none;
+      display: inline-block;
+      color: #007bff;
+
+    }
+
+    /* 滑動移過後改變文字顏色 */
+    div.breadcrumb ol.breadcrumb_list>li>a:hover {
+      color: #0056b3;
+    }
+
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      div.input-ft {
+        display: block;
+      }
+
+      input.ch-3 {
+        width: 50%;
+        height: 40px;
+        margin-bottom: 10px;
+      }
+
+    }
+
+    @media (max-width: 575.98px) {
+      div.input-ft {
+        display: block;
+      }
+
+      input.ch-3 {
+        width: 50%;
+        height: 40px;
+        margin-bottom: 10px;
+      }
+
+    }
+  </style>
+
+
+<body>
+  <input type="checkbox" name="" id="menu_control">
+
+  <div class="header">
+    <h1 class="logo">
+      <a href="./index.html"><img src="
+        ./image/icon/LOGO.png" href="index.html" alt="EHWlogo"></a>
+    </h1>
+
+    <label for="menu_control" class="menu_btn">
+      <span>選單</span>
+    </label>
+
+    <nav>
+      <a href="share.html">食譜分享</a>
+      <a href="story.html">品牌故事</a>
+      <a href="Calorie.html">卡路里計算</a>
+      <a href="healthfood.html">飲食方式</a>
+    </nav>
+
+    <div class="navright">
+      <a class="car" href="cart.html"> <button class="bt-buy"> <img class="bt-img" src="./image/icon/buy.png"
+            alt="購物車">購物車 </button></a>
+      <a href="member.html"><button class="bt-member" src=會員登入.html>會員註冊</button></a>
+    </div>
+
+  </div>
+  <!--                    上方圖片                -->
+
+
+  <div class="img_block"></div>
+
+  <div class="breadcrumb">
+    <ol class="breadcrumb_list">
+      <li><a href="./index.html">首頁</a></li>
+      <li>註冊會員</li>
+    </ol>
+  </div>
+
+  <h1 class="h1">註冊會員</h1>
+
+  <main class="main">
+    <div class="top">
+      <div class="top-1">
+        <p>姓名:</p><input type="text">
+      </div>
+      <div class="top-1">
+        <p>手機號碼:</p><input type="text">
+      </div>
+    </div>
+
+
+    <p class="log-in"><a href="login.html">登入帳號</a></p>
+
+
+    <input type="submit" class="register" name="" id="" value="註冊">
+
+    <div class="input-ft">
+      <input class="ch-3" type="submit" value="Email註冊會員">
+      <input class="ch-3" type="submit" value="使用Facebook註冊">
+      <input class="ch-3" type="submit" value="以Google註冊">
+    </div>
+
+
+
+
+  </main>
+
+
+  <footer class="footer">
+    <h3 class="ft_h3">聯絡我們</h3>
+    <ul class="footer_list">
+
+      <li class="ft_h3"> <img src="./image/icon/phone.svg" alt="電話:02-1234-5678">
+        <p>電話:02-1234-5678</p>
+      </li>
+      <li class="ft_h3"> <img src="./image/icon/instagram.svg" alt="e-mail:food@gmail.com">
+        <p>e-mail:healthyfood@gmail.com</p>
+      </li>
+      <li class="ft_h3"> <img src="./image/icon/e-mail.svg" alt="Eat_healthy_everyday">
+        <p>Eat_healthy_everyday</p>
+      </li>
+    </ul>
+    <h3 class="reference"> 本網站為緯育TibaMe前端工程師專業技術養成班THD103學員專題作品，本平台僅供學習、展示之用。若有侵權疑慮，您可以私訊 [緯育TibaMe] ，後續會由專人協助處理。
+      <br>參考資源: 常常好食、愛料理、中保無限。
+    </h3>
+
+  </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>食譜分享</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+  <link rel="stylesheet" href="./css/all.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./Bootstrap/bootstrap-grid.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500&display=swap" rel="stylesheet">
+
+
+  <style>
+    /*======================================== 首頁上方圖片============================================ */
+
+
+    div.grid_container {
+      /*   border: 1px solid red; */
+      /*   padding: 10px; */
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-areas: "header header section" "aside main section" "aside footer footer";
+      width: 100%;
+      margin: auto;
+    }
+
+    div.grid_container .grid_item {
+      /*   border: 1px solid blue; */
+
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    /* 各自給定名稱 */
+    div.grid_container header.grid_item {
+      grid-area: header;
+      background-image: url("./image/食譜分享/上圖.jpg");
+      height: 150px;
+      border: 3px solid rgba(255, 216, 79, 1);
+    }
+
+    div.grid_container aside.grid_item {
+      grid-area: aside;
+      background-image: url("./image/食譜分享/左圖.jpg");
+      /* width: 300px; */
+      border: 3px solid rgba(255, 216, 79, 1);
+    }
+
+    div.grid_container main.grid_item {
+      grid-area: main;
+      background-image: url("./image/食譜分享/中間.webp");
+      height: 150px;
+      border: 3px solid rgba(255, 216, 79, 1);
+    }
+
+    div.grid_container section.grid_item {
+      grid-area: section;
+      background-image: url("./image/食譜分享/右圖.jpg");
+      /* width: 300px; */
+      border: 3px solid rgba(255, 216, 79, 1);
+    }
+
+    div.grid_container footer.grid_item {
+      grid-area: footer;
+      background-image: url("./image/食譜分享/下圖.jpg");
+      background-position: center center;
+      height: 150px;
+      border: 3px solid rgba(255, 216, 79, 1);
+    }
+
+    div.grid_container footer.grid_item img {
+      width: 20;
+    }
+
+    /*======================================== 食材 通用指令============================================ */
+
+    h2.h2-kind {
+      font-size: 28px;
+      font-weight: 600;
+      color: rgba(174, 64, 64, 1);
+      background-color: rgba(255, 216, 79, 1);
+      width: calc(100% - 250px);
+      height: 36px;
+      line-height: 40px;
+      border-radius: 20px;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 60px;
+
+    }
+
+    img.mid-bp {
+      border: 5px solid rgba(255, 216, 79, 1);
+    }
+
+    /*======================================== 當季食材============================================ */
+
+    div.contain {
+      /* border: 1px solid red; */
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 10px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 24px;
+    }
+
+    div.contain p {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    div.contain p.article {
+      text-align: left;
+      line-height: 28px;
+    }
+
+
+    div.contain img {
+      height: 150px;
+      width: 150px;
+      border-radius: 10px;
+    }
+
+    div.contain div.left {
+      display: inline-block;
+      gap: 20px;
+    }
+
+    div.contain div.left div.left-top {
+      margin-bottom: 20px;
+    }
+
+    div.contain div.mid {
+      display: inline-block;
+      /* border: 1px solid #000; */
+      margin: 20px;
+    }
+
+    div.contain div.mid p {
+      margin: auto;
+      width: 500px;
+      padding-top: 10px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+
+    div.contain div.mid img {
+      width: calc(100% - 50px);
+      height: 250px;
+      border-radius: 20px;
+    }
+
+
+    div.contain div.right {
+      display: inline-block;
+    }
+
+    div.contain div.right div.right-top {
+      margin-bottom: 20px;
+    }
+
+
+    /*======================================== 雞腿肉============================================ */
+
+    div.contain-2 {
+      /* border: 1px solid red; */
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 10px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 24px;
+    }
+
+    div.contain-2 p {
+      margin-top: 10px;
+    }
+
+    div.contain-2 img {
+      height: 150px;
+      width: 150px;
+      border-radius: 10px;
+    }
+
+    div.contain-2 div.left {
+      display: inline-block;
+      gap: 20px;
+    }
+
+    div.contain-2 div.left div.left-top {
+      margin-bottom: 20px;
+    }
+
+    div.contain-2 div.mid {
+      display: inline-block;
+      border: 1px solid #000;
+      margin: 20px;
+    }
+
+    div.contain-2 div.mid p {
+      margin: auto;
+      width: 400px;
+      padding-top: 10px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+
+    div.contain-2 div.mid img {
+      width: calc(100% - 50px);
+      height: 250px;
+      border-radius: 20px;
+    }
+
+
+    div.contain-2 div.right {
+      display: inline-block;
+    }
+
+    div.contain-2 div.right div.right-top {
+      margin-bottom: 20px;
+    }
+
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      div.contain div.mid {
+        position: absolute;
+      }
+
+      h2.h2-kind {
+        position: relative;
+      }
+
+      div.contain div.left,
+      div.contain div.right {
+
+        margin: 420px 5% 0px;
+      }
+
+
+
+    }
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      div.contain div.mid {
+        position: absolute;
+      }
+
+      h2.h2-kind {
+        position: relative;
+      }
+
+      div.contain div.left,
+      div.contain div.right {
+        margin: 420px 5% 0px;
+      }
+
+
+
+    }
+
+    @media (max-width: 575.98px) {
+      div.contain div.mid {
+        position: absolute;
+      }
+
+      h2.h2-kind {
+        position: relative;
+      }
+
+      div.contain div.left,
+      div.contain div.right {
+        margin: 420px 5% 0px;
+      }
+
+      div.contain div.mid p {
+        width: 90%;
+        font-size: 20px;
+
+      }
+    }
+
+    /*======================================== 牛排============================================ */
+
+    div.contain-3 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 10px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 60px;
+    }
+
+    div.contain-3 p {
+      margin-top: 10px;
+    }
+
+    div.contain-3 img {
+      height: 150px;
+      width: 150px;
+      border-radius: 10px;
+    }
+
+    div.contain-3 div.left {
+      display: inline-block;
+      gap: 20px;
+    }
+
+    div.contain-3 div.left div.left-top {
+      margin-bottom: 20px;
+    }
+
+    div.contain-3 div.mid {
+      display: inline-block;
+
+      margin: 20px;
+    }
+
+    div.contain-3 div.mid p {
+      margin: auto;
+      text-align: left;
+      width: 450px;
+      padding-top: 10px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+
+    div.contain-3 div.mid img {
+      width: calc(100% - 50px);
+      height: 250px;
+      border-radius: 20px;
+    }
+
+
+    div.contain-3 div.right {
+      display: inline-block;
+    }
+
+    div.contain-3 div.right div.right-top {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      div.contain-3 div.mid {
+        position: absolute;
+      }
+
+      h2.h2-kind {
+        position: relative;
+      }
+
+      div.contain-3 div.left,
+      div.contain-3 div.right {
+        margin-top: 400px;
+        margin-right: 20px;
+        margin: 400px 5% 0px;
+      }
+
+
+    }
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      div.contain-3 div.mid {
+        position: absolute;
+      }
+
+      h2.h2-kind {
+        position: relative;
+      }
+
+      div.contain-3 div.left,
+      div.contain-3 div.right {
+        margin-top: 400px;
+        margin-right: 20px;
+        margin: 400px 5% 0px;
+      }
+
+
+    }
+
+    @media (max-width: 575.98px) {
+      div.contain-3 div.mid {
+        position: absolute;
+      }
+
+      h2.h2-kind {
+        position: relative;
+      }
+
+      div.contain-3 div.left,
+      div.contain-3 div.right {
+        margin-top: 400px;
+        margin-right: 20px;
+        margin: 400px 5% 0px;
+      }
+
+      div.contain-3 div.mid p {
+        width: 90%;
+        font-size: 20px;
+
+      }
+    }
+
+
+    /* =========== 麵包削 =========== */
+    div.breadcrumb {
+      /* border: 1px solid #000; */
+      padding: 5px 10px;
+      margin-top: 45px;
+      margin-left: 70px;
+      width: 200px;
+    }
+
+    div.breadcrumb ol.breadcrumb_list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 0;
+    }
+
+    div.breadcrumb ol.breadcrumb_list>li {
+      /*   border: 1px solid red; */
+      display: inline-block;
+      color: gray;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+
+
+    /* 利用 ::before 擬似元素，創造斜線做為分隔 */
+    div.breadcrumb ol.breadcrumb_list>li::before {
+      content: " /";
+      font-size: 18px;
+      color: gray;
+      margin: 0 10px;
+    }
+
+    /* 第一個 li 元素，將 ::before 設定回來需要的 */
+    div.breadcrumb ol.breadcrumb_list>li:first-child::before {
+      display: none;
+    }
+
+
+    /* 基本文字樣式 */
+    div.breadcrumb ol.breadcrumb_list>li>a {
+      /*   border: 1px solid blue; */
+      text-decoration: none;
+      display: inline-block;
+      color: #007bff;
+
+    }
+
+    /* 滑動移過後改變文字顏色 */
+    div.breadcrumb ol.breadcrumb_list>li>a:hover {
+      color: #0056b3;
+    }
+  </style>
+
+
+
+
+
+<body>
+
+  <input type="checkbox" name="" id="menu_control">
+
+  <div class="header">
+    <h1 class="logo">
+      <a href="./index.html"><img src="
+        ./image/icon/LOGO.png" href="index.html" alt="EHWlogo"></a>
+    </h1>
+
+    <label for="menu_control" class="menu_btn">
+      <span>選單</span>
+    </label>
+
+    <nav>
+      <a href="share.html">食譜分享</a>
+      <a href="story.html">品牌故事</a>
+      <a href="Calorie.html">卡路里計算</a>
+      <a href="healthfood.html">飲食方式</a>
+    </nav>
+
+    <div class="navright">
+      <a class="car" href="cart.html"> <button class="bt-buy"> <img class="bt-img" src="./image/icon/buy.png"
+            alt="購物車">購物車 </button></a>
+      <a href="member.html"><button class="bt-member" src=會員登入.html>會員註冊</button></a>
+    </div>
+
+  </div>
+
+  <!--                    上方圖片                -->
+  <div class="img_block"></div>
+
+
+
+  <div class="grid_container">
+    <header class="grid_item">
+
+    </header>
+    <aside class="grid_item">
+
+    </aside>
+    <main class="grid_item">
+
+    </main>
+    <section class="grid_item">
+
+    </section>
+    <footer class="grid_item">
+
+    </footer>
+  </div>
+
+
+  <div class="breadcrumb">
+    <ol class="breadcrumb_list">
+      <li><a href="./index.html">首頁</a></li>
+      <li>食譜分享</li>
+    </ol>
+  </div>
+  <!--                    當季食材                -->
+
+  <main class="main">
+
+    <h2 class="h2-kind">當季食材</h2>
+
+    <div class="contain">
+      <div class="left">
+        <div class="left-top">
+          <img src="./image/食譜分享/山藥.jpg" alt="山藥">
+          <p>山藥</p>
+        </div>
+        <div>
+          <img src="./image/食譜分享/花椰菜.jpg" alt="花椰菜">
+          <p>花椰菜</p>
+        </div>
+      </div>
+
+
+
+
+      <div class="mid">
+        <img class="mid-bp" src="./image/食譜分享/右圖.jpg" alt="當季食材">
+        <p class="article">現在時令當季的食材有哪些？
+          這個時候盛產的食材經濟實惠又新鮮美味，
+          不用它們做菜可說是一種浪費！
+          每季小編都會精選使用當季食材的食譜，
+          讓你盡情尋找料理的靈感！</p>
+      </div>
+
+
+      <div class="right">
+        <div class="right-top">
+          <img src="./image/食譜分享/波菜.jpg" alt="菠菜">
+          <p>菠菜</p>
+        </div>
+        <div>
+          <img src="./image/食譜分享/高麗菜.jpg" alt="高麗菜">
+          <p>高麗菜</p>
+        </div>
+      </div>
+
+
+
+    </div>
+    <!--                    雞腿肉                  -->
+
+    <h2 class="h2-kind">雞腿肉</h2>
+
+
+    <div class="contain">
+      <div class="left">
+        <div class="left-top">
+          <img src="./image/食譜分享/左宗棠雞.jpg" alt="山藥">
+          <p>左宗棠雞</p>
+        </div>
+        <div>
+          <img src="./image/食譜分享/香煎腿排.webp" alt="花椰菜">
+          <p>香煎腿排</p>
+        </div>
+      </div>
+
+
+
+
+      <div class="mid">
+        <img class="mid-bp" src="./image/食譜分享/下圖.jpg" alt="當季食材">
+        <p class="article">在雞肉的各部位中，雞腿肉可以說是最受歡迎的部位，
+          肉質軟嫩多汁，不像雞胸肉料理起來容易乾柴，烹調方式也相當多樣，
+          快炒、照燒、煎炸、清蒸都好吃！</p>
+      </div>
+
+
+      <div class="right">
+        <div class="right-top">
+          <img src="./image/食譜分享/三杯雞腿.webp" alt="菠菜">
+          <p>三杯雞腿</p>
+        </div>
+        <div>
+          <img src="./image/食譜分享/日式炸雞.webp" alt="高麗菜">
+          <p>日式炸雞</p>
+        </div>
+      </div>
+    </div>
+    <!--                    牛排                    -->
+
+    <h2 class="h2-kind">牛排</h2>
+
+
+    <div class="contain-3">
+      <div class="left">
+        <div class="left-top">
+          <img src="./image/食譜分享/煎牛排.webp" alt="煎牛排">
+          <p>煎牛排</p>
+        </div>
+        <div>
+          <img src="./image/食譜分享/威靈頓牛排.webp" alt="威靈頓牛排">
+          <p>威靈頓牛排</p>
+        </div>
+      </div>
+
+
+      <div class="mid">
+        <img class="mid-bp" src="./image/食譜分享/牛排.jpg" alt="牛排">
+        <p class="article">新鮮牛排加上簡單的調味，再選擇自己喜歡的配菜，
+          美味的牛排不只能在餐廳吃，更可以在家輕鬆享用呢～</p>
+      </div>
+
+
+      <div class="right">
+        <div class="right-top">
+          <img src="./image/食譜分享/氣炸牛排.webp" alt="氣炸鍋牛排">
+          <p>氣炸鍋牛排</p>
+        </div>
+        <div>
+          <img src="./image/食譜分享/烤牛排.webp" alt="烤牛排">
+          <p>烤牛排</p>
+        </div>
+      </div>
+
+
+  </main>
+
+
+
+  <footer class="footer">
+    <h3 class="ft_h3">聯絡我們</h3>
+    <ul class="footer_list">
+
+      <li class="ft_h3"> <img src="./image/icon/phone.svg" alt="電話:02-1234-5678">
+        <p>電話:02-1234-5678</p>
+      </li>
+      <li class="ft_h3"> <img src="./image/icon/instagram.svg" alt="e-mail:food@gmail.com">
+        <p>e-mail:healthyfood@gmail.com</p>
+      </li>
+      <li class="ft_h3"> <img src="./image/icon/e-mail.svg" alt="Eat_healthy_everyday">
+        <p>Eat_healthy_everyday</p>
+      </li>
+    </ul>
+    <h3 class="reference"> 本網站為緯育TibaMe前端工程師專業技術養成班THD103學員專題作品，本平台僅供學習、展示之用。若有侵權疑慮，您可以私訊 [緯育TibaMe] ，後續會由專人協助處理。
+      <br>參考資源: 常常好食、愛料理、中保無限。
+    </h3>
+
+  </footer>
+
+
+</body>
+
+</html>

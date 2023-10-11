@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>卡路里計算</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+  <link rel="stylesheet" href="./css/all.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./Bootstrap/bootstrap-grid.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500&display=swap" rel="stylesheet">
+
+  <style>
+    main.main {
+      margin: 20px;
+      padding-left: 0%;
+    }
+
+    h1.everyday {
+      font-size: 32px;
+      font-weight: 600;
+      font-family: 微軟正黑體;
+      margin: 40px 0px 40px 30px;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 600;
+      font-family: 微軟正黑體;
+      margin: 40px 0px 40px 30px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+
+    div.data-input {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 30px;
+    }
+
+    div.data-input {
+      font-size: 20px;
+      font-weight: 600;
+      font-family: 微軟正黑體;
+    }
+
+    div.data input.number {
+      width: 200px;
+      height: 30px;
+    }
+
+    div.data {
+      margin-right: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      ;
+    }
+
+
+    div.chose div {
+      display: inline-block;
+      display: flex;
+      margin-top: 20px;
+    }
+
+    input.give {
+      width: 230px;
+      height: 70px;
+      border-radius: 10px;
+      border: 5px solid rgba(255, 216, 79, 1);
+      background-color: rgba(255, 166, 41, 1);
+      color: rgba(255, 255, 255, 1);
+      font-size: 28px;
+      margin-bottom: 30px;
+      margin-top: 20px;
+      align-content: center;
+    }
+
+    div.data-result {
+      display: flex;
+      display: flexbox;
+      /* border: 1px solid #000; */
+      line-height: 36px;
+    }
+
+    div.data-result div.data-result-l {
+      /* border: 1px solid #000; */
+      display: inline-block;
+      width: 380px;
+
+    }
+
+    div.data-result-r {
+      border: 1px solid rgba(174, 64, 64, 1);
+      width: salc(100% - 500px);
+    }
+
+    div.data-result div.data-result-l {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      /* border: 3px solid #1c90b3; */
+    }
+
+    div.data-result div.data-result-l input {
+
+      height: 30px;
+      width: 200px;
+      border: 0px;
+    }
+
+    /* 計算結果 */
+
+    div.data-result {
+      font-size: 16px;
+      font-weight: 600;
+      font-family: 微軟正黑體;
+      justify-content: space-between;
+    }
+
+    div.data-result div.data-result-l div.result-1 {
+      display: flex;
+      display: block;
+      /* border: 3px solid #1cb397; */
+    }
+
+    div.result-1 P {
+      margin-bottom: 10px;
+    }
+
+    div.result-1 input {
+      margin-bottom: 20px;
+    }
+
+    div.data-result div.data-result-l div.result-2 {
+      display: flex;
+      display: block;
+      /* border: 3px solid #1cb397; */
+    }
+
+    div.result-2 P {
+      margin-bottom: 10px;
+    }
+
+    div.result-2 input {
+      margin-bottom: 20px;
+    }
+
+
+
+
+
+    div.data-result div.data-result-l div.result-3 {
+      display: flex;
+      display: block;
+      /* border: 3px solid #1cb397; */
+
+    }
+
+    div.result-3 P {
+      margin-bottom: 10px;
+    }
+
+    div.result-3 input {
+      margin-bottom: 20px;
+    }
+
+    div.result-bt {
+      background-color: rgba(255, 216, 79, 1);
+      color: aliceblue;
+      line-height: 25px;
+      width: 230px;
+      border-radius: 5px;
+      padding: 5px;
+      /* margin: 0 auto; */
+    }
+
+
+    div.data-result div.data-result-r {
+      padding: 10px;
+
+      /* border: 3px solid #1c90b3; */
+    }
+
+    /* =========== 麵包削 =========== */
+    div.breadcrumb {
+      /* border: 1px solid #000; */
+      padding: 5px 10px;
+      margin-top: 45px;
+      margin-left: 70px;
+      width: 200px;
+    }
+
+    div.breadcrumb ol.breadcrumb_list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 0;
+    }
+
+    div.breadcrumb ol.breadcrumb_list>li {
+      /*   border: 1px solid red; */
+      display: inline-block;
+      color: gray;
+      font-size: 20px;
+      font-family: 微軟正黑體;
+      font-weight: 600;
+    }
+
+
+    /* 利用 ::before 擬似元素，創造斜線做為分隔 */
+    div.breadcrumb ol.breadcrumb_list>li::before {
+      content: " /";
+      font-size: 18px;
+      color: gray;
+      margin: 0 10px;
+    }
+
+    /* 第一個 li 元素，將 ::before 設定回來需要的 */
+    div.breadcrumb ol.breadcrumb_list>li:first-child::before {
+      display: none;
+    }
+
+
+    /* 基本文字樣式 */
+    div.breadcrumb ol.breadcrumb_list>li>a {
+      /*   border: 1px solid blue; */
+      text-decoration: none;
+      display: inline-block;
+      color: #007bff;
+
+    }
+
+    /* 滑動移過後改變文字顏色 */
+    div.breadcrumb ol.breadcrumb_list>li>a:hover {
+      color: #0056b3;
+    }
+  </style>
+
+
+
+
+
+<body>
+  <input type="checkbox" name="" id="menu_control">
+
+  <div class="header">
+    <h1 class="logo">
+      <a href="./index.html"><img src="
+        ./image/icon/LOGO.png" href="index.html" alt="EHWlogo"></a>
+    </h1>
+
+    <label for="menu_control" class="menu_btn">
+      <span>選單</span>
+    </label>
+
+    <nav>
+      <a href="share.html">食譜分享</a>
+      <a href="story.html">品牌故事</a>
+      <a href="Calorie.html">卡路里計算</a>
+      <a href="healthfood.html">飲食方式</a>
+    </nav>
+
+    <div class="navright">
+      <a class="car" href="cart.html"> <button class="bt-buy"> <img class="bt-img" src="./image/icon/buy.png"
+            alt="購物車">購物車 </button></a>
+      <a href="member.html"><button class="bt-member" src=會員登入.html>會員註冊</button></a>
+    </div>
+
+  </div>
+
+
+  </header>
+  <div class="header-back"></div>
+
+  <!--                    上方圖片                -->
+
+  <div class="img_block"></div>
+
+  <div class="breadcrumb">
+    <ol class="breadcrumb_list">
+      <li><a href="./index.html">首頁</a></li>
+      <li>健康餐選擇</li>
+    </ol>
+  </div>
+
+  <main class="main">
+
+    <h1 class="everyday">每日所需熱量計算</h1>
+
+    <div class="data-input">
+      <div class="data">
+        <div>
+          <p>身高 (公分)</p>
+          <input class="number" type="text">
+        </div>
+        <div>
+          <p>目前體重 (公斤)</p>
+          <input class="number" type="text">
+        </div>
+        <div>
+          <p>性別</p>
+          <div>男<input class="radio" type="radio" name="gender" value="1">女<input class="radio" name="gender"
+              type="radio" value="2"></div>
+        </div>
+      </div>
+
+
+      <div class="chose">
+        <p>活動量</p>
+        <div><input class="radio" type="radio" name="kind" value="1">
+          <p>輕度工作大部分從事靜態或坐者的工作。<br>
+            例如：家庭主婦、坐辦公室的上班族、售貨員。
+          </p>
+        </div>
+
+        <div><input class="radio" type="radio" name="kind" value="2">
+          <p>中度工作從事機械操作、接待或家事等站立活動較多的工作。<br>
+            例如：褓母、護士、服務生
+          </p>
+        </div>
+
+        <div><input class="radio" type="radio" name="kind" value="3">
+          <p>重度工作從事農耕、漁業、建築等的重度使用體力之工作。<br>
+            例如：運動員、搬家工人
+          </p>
+        </div>
+
+
+        <input class="give" type="submit" value="開始試算">
+
+      </div>
+    </div>
+
+    <hr>
+
+    <h2>試算結果</h2>
+
+    <div class="data-result">
+      <div class="data-result-l">
+        <div class="result-1">
+          <p>標準體重 (公斤):</p><input type="text">
+        </div>
+        <div class="result-2">
+          <p>體重合理範圍 (公斤):</p><input type="text">
+        </div>
+        <div class="result-3">
+          <p>達成理想體重每日所需熱量 (大卡)</p><input type="text">
+        </div>
+        <div class="result-bt">
+          <p>
+            以上數值僅供參考，<br>
+            如有相關疑問請向<br>
+            專業醫師進行諮詢。
+          </p>
+        </div>
+
+      </div>
+
+      <div class="data-result-r">
+        <p class="formula">計算公式：</p>
+        <div style="margin-left: 20px;"><br>
+          <p> 1.標準體重：</h><br>
+            男性：（身高cm－80）×70﹪<br>
+            女性：（身高cm－70）×60﹪<br><br>
+            2.體重合理範圍：<br>
+            標準體重 ×90﹪~ 標準體重 ×110﹪<br>
+            3.輕度工作(大卡)：<br>
+            體重過輕(小於合理範圍最小值) ：35×標準體重<br>
+            體重標準 ：30×標準體重<br>
+            體重過重(大於合理範圍最大值) ：25×標準體重<br><br>
+            4.中度工作(大卡)：<br>
+            體重過輕(小於合理範圍最小值) ：40×標準體重<br>
+            體重標準 ：35×標準體重<br>
+            體重過重(大於合理範圍最大值) ：30×標準體重<br><br>
+            5.重度工作(大卡)：<br>
+            體重過輕(小於合理範圍最小值) ：35×標準體重<br>
+            體重標準 ：40×標準體重<br>
+            體重過重(大於合理範圍最大值) ：35×標準體重<br></p>
+        </div>
+        <br>
+
+        <p>範例：</p>
+        <p style=" text-indent:24px;">性別→男、身高→180公分、體重→100公斤、活動量→中度工作</p><br>
+        <div style="margin-left: 20px;">
+          <p> 1.標準體重：(180-80)×70﹪=70公斤<br>
+            2.體重合理範圍:<br>
+            最小值(70×90﹪=63公斤)<br>
+            最大值(70×110﹪=77公斤)<br>
+            3.體重100公斤>體重合理範圍最大值77公斤<br>
+            中度工作:30×70=2100(大卡)<br></p>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+  </main>
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer">
+    <h3 class="ft_h3">聯絡我們</h3>
+    <ul class="footer_list">
+
+      <li class="ft_h3"> <img src="./image/icon/phone.svg" alt="電話:02-1234-5678">
+        <p>電話:02-1234-5678</p>
+      </li>
+      <li class="ft_h3"> <img src="./image/icon/instagram.svg" alt="e-mail:food@gmail.com">
+        <p>e-mail:healthyfood@gmail.com</p>
+      </li>
+      <li class="ft_h3"> <img src="./image/icon/e-mail.svg" alt="Eat_healthy_everyday">
+        <p>Eat_healthy_everyday</p>
+      </li>
+    </ul>
+    <h3 class="reference"> 本網站為緯育TibaMe前端工程師專業技術養成班THD103學員專題作品，本平台僅供學習、展示之用。若有侵權疑慮，您可以私訊 [緯育TibaMe] ，後續會由專人協助處理。
+      <br>參考資源: 常常好食、愛料理、中保無限。
+    </h3>
+
+  </footer>
+
+
+</body>
+
+</html>

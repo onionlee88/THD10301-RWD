@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>首頁</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+  <link rel="stylesheet" href="./css/all.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./Bootstrap/bootstrap-grid.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* =================首頁上方圖片================= */
+    div.img_block {
+      width: 100%;
+      height: 250px;
+
+      /* border: 3px solid #852121; */
+      background-image: url("./image/首頁/首頁上方圖片.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center 0;
+    }
+
+
+    h2.body {
+      color: rgba(157, 42, 42, 1);
+      margin-bottom: 20px;
+      font-size: 36px;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+    /* =================main================= */
+
+    main.main {
+      padding: 30px;
+    }
+
+    h3.h3 {
+      font-size: 20px;
+    }
+
+    /* =================我們如何運作================= */
+    div.menu {
+      list-style: none;
+      display: flex;
+      margin-bottom: 20px;
+      justify-content: space-between;
+      width: 80%;
+      margin: 0px auto 20px auto;
+      font-weight: 600;
+    }
+
+    main.main div.menu li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    main.main div.menu img.image-1 {
+      width: 113px;
+
+      height: 113px;
+      ;
+
+    }
+
+    div.line {
+      border-bottom: 5px solid rgba(255, 216, 79, 1);
+      width: 80%;
+
+      margin: 30px auto 50px;
+
+    }
+
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      h2.body {
+        font-size: 24px;
+      }
+
+      h3.h3 {
+        margin-top: 5px;
+        font-size: 16px;
+
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      h2.body {
+        font-size: 24px;
+      }
+
+      h3.h3 {
+        margin-top: 5px;
+        font-size: 16px;
+
+      }
+
+      div.menu {
+        width: 100%;
+      }
+
+      img.image-1 {
+        width: 30px;
+        height: 30px;
+        /* border: 1px solid #000; */
+      }
+
+
+      main.main div.menu img.rad_right {
+        width: 50px;
+        height: 50px;
+        /* align-items: center;     */
+
+      }
+    }
+
+
+    /*======================================== 卡片============================================ */
+    main.main div.cards {
+      display: flex;
+      display: grid;
+      grid-template-columns: 305px 305px 305px;
+      margin: 0 auto;
+      gap: 20px;
+      justify-content: center;
+      border-bottom: 30px;
+    }
+
+    h1.car-24 {
+      font-size: 16px;
+      font-weight: 600;
+
+    }
+
+    article.card {
+      /* border: 3px solid rgba(172, 40, 40, 1); */
+      background-color: rgba(255, 255, 255, 1);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      box-shadow: 5px 5px 10px;
+      width: 250px;
+    }
+
+    article.card a.img_block {
+      display: block;
+      font-size: 0;
+    }
+
+    article.card a.img_block>img {
+      max-width: 100%;
+      border-bottom: 4px solid rgba(255, 255, 255, 1);
+    }
+
+    article.card div.content_block {
+      padding: 10px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      main.main div.cards {
+        grid-template-columns: 220px 220px 220px;
+      }
+
+      article.card {
+        width: 220px;
+      }
+    }
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      main.main div.cards {
+        grid-template-columns: 250px 250px;
+      }
+
+      article.card {
+        width: 220px;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      main.main div.cards {
+        grid-template-columns: 200px 200px;
+      }
+
+      article.card {
+        width: 200px;
+      }
+    }
+
+    /* ================================飲食種類簡介============================================ */
+
+    h2.three {
+      color: rgba(157, 42, 42, 1);
+      margin-bottom: 20px;
+      font-size: 36px;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+    main.main div.threemethod div.three {
+
+      width: 100%;
+      height: 100%;
+      display: flex;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 10px;
+      justify-content: center
+    }
+
+    div.threemethod div.three a.ch2 {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    main.main div.threemethod div.three img {
+      width: 100%;
+      border: 5px solid rgba(255, 216, 79, 1);
+      margin-bottom: 20px;
+      /* justify-content: center;   */
+    }
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      h2.three {
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      h2.three {
+        font-size: 24px;
+      }
+    }
+
+    /* ========================================好評推薦============================================  */
+    .gd-h2 {
+      background-color: rgba(255, 216, 79, 1);
+      margin-top: 50px;
+    }
+
+    h2.gd {
+      padding: 20px;
+      color: rgba(255, 255, 255, 1);
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+
+
+    div.Introduction div {
+      color: rgba(0, 0, 0, 1);
+      background-color: rgba(255, 216, 79, 1);
+
+      font-size: 20px;
+      font-weight: 600;
+      height: 100%;
+      padding-bottom: 10px;
+      display: flex;
+      /* display: grid; */
+    }
+
+    div.Introduction div.people {
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 1);
+      border-radius: 5px;
+      line-height: 30px;
+      /* float: left; */
+      /* width: 1fr 1fr 1fr; */
+      width: calc(100% / 3 - 40px - 20px);
+    }
+
+    div.Introduction div.people p.p-24 {
+      margin-bottom: 10px;
+      /* font-size: 24px; */
+    }
+
+    div.div-people {
+      justify-content: space-around;
+      /* grid-template-columns: 200px 200px 200px; */
+    }
+
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      div.Introduction div {
+        display: block;
+      }
+
+      div.Introduction div.people {
+        margin: 0px auto 20px;
+        width: calc(100% - 40px - 20px);
+      }
+    }
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      div.Introduction div {
+        display: block;
+      }
+
+      div.Introduction div.people {
+        margin: 0px auto 20px;
+        width: calc(100% - 40px - 20px);
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      div.Introduction div {
+        display: block;
+      }
+
+      div.Introduction div.people {
+        margin: 0px auto 20px;
+        width: calc(100% - 40px - 20px);
+      }
+    }
+
+
+    #myBtn {
+      display: none;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #f2f2f2;
+      color: #000;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+      position: sticky;
+      left: 100%;
+      bottom: 20px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+
+    #myBtn:hover {
+      background-color: #555;
+    }
+
+    /* .fa-arrow-up:before {
+      content: "\f0aa";
+    } */
+  </style>
+</head>
+
+<body>
+
+  <input type="checkbox" name="" id="menu_control">
+
+  <div class="header">
+    <h1 class="logo">
+      <a href="./index.html"><img src="
+        ./image/icon/LOGO.png" href="index.html" alt="EHWlogo"></a>
+    </h1>
+
+    <label for="menu_control" class="menu_btn">
+      <span>選單</span>
+    </label>
+
+    <nav>
+      <a href="share.html">食譜分享</a>
+      <a href="story.html">品牌故事</a>
+      <a href="Calorie.html">卡路里計算</a>
+      <a href="healthfood.html">飲食方式</a>
+    </nav>
+
+    <div class="navright">
+      <a class="car" href="cart.html"> <button class="bt-buy"> <img class="bt-img" src="./image/icon/buy.png"
+            alt="購物車">購物車 </button></a>
+      <a href="member.html"><button class="bt-member" src=會員登入.html>會員註冊</button></a>
+    </div>
+
+  </div>
+
+
+  <div class="img_block"></div>
+
+  <main class="main">
+
+    <h2 class="body">我們如何運作</h2>
+
+
+    <div class="menu">
+      <div><img class="image-1" src="./image/icon/1.png" alt="飲食種類選擇">
+        <h3 class="h3">1.飲食種類選擇</h3>
+      </div>
+
+      <div><img class="image-1" src="./image/icon/2.png" alt="選擇購買產品">
+        <h3 class="h3">2.選擇購買產品</h3>
+      </div>
+
+      <div><img class="image-1" src="./image/icon/3.png" alt="選擇送貨地點">
+        <h3 class="h3">3.選擇送貨地點</h3>
+      </div>
+
+      <div><img class="image-1" src="./image/icon/4.png" alt="收到後可即食">
+        <h3 class="h3">4.收到後可即食</h3>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="cards">
+      <article class="card">
+        <a href="#" target="_blank" class="img_block"><img src="./image/飲食法/地中海/蜂蜜芥末烤雞腿義式番茄藜麥飯.jpg"
+            alt="蜂蜜芥末烤雞腿義式番茄藜麥飯"></a>
+        <div class="content_block">
+          <h1 class="car-24">飲食種類:地中海飲食</h1><br>
+          <p>料理名稱:<br>
+            蜂蜜芥末烤雞腿義式番茄藜麥飯</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a href="#" target="_blank" class="img_block"><img src="./image/飲食法/211料理/韓式醬味梅花豬肯瓊鷹嘴豆飯與日式煮物.jpg"
+            alt="韓式醬味梅花豬肯瓊鷹嘴豆飯與日式煮物"></a>
+        <div class="content_block">
+          <h1 class="car-24">飲食種類:211飲食</h1><br>
+          <p>料理名稱:<br>
+            韓式醬味梅花豬肯瓊鷹嘴豆飯與
+            日式煮物</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a href="#" target="_blank" class="img_block"><img src="./image/飲食法/DASH/紐奧良香料鯖魚高麗菜豆薯飯.jpg"
+            alt="紐奧良香料鯖魚高麗菜豆薯飯"></a>
+        <div class="content_block">
+          <h1 class="car-24">飲食種類:得舒飲食</h1><br>
+          <p>料理名稱:<br>
+            紐奧良香料鯖魚高麗菜豆薯飯</p>
+        </div>
+      </article>
+
+
+
+      <article class="card">
+        <a href="#" target="_blank" class="img_block"><img src="./image/飲食法/地中海/西西里風烤爐魚香菜檸檬地瓜糙米飯.jpg "
+            alt="西西里風烤爐魚香菜檸檬地瓜糙米飯"></a>
+        <div class="content_block">
+          <h1 class="car-24">飲食種類:地中海飲食</h1><br>
+          <p>料理名稱:<br>
+            西西里風烤爐魚香菜檸檬地瓜糙米飯</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a href="#" target="_blank" class="img_block"><img src="./image/飲食法/211料理/蜂蜜芥末烤雞腿麻油雞紫米與普羅旺斯燉菜.jpg"
+            alt="蜂蜜芥末烤雞腿麻油雞紫米與普羅旺斯燉菜"></a>
+        <div class="content_block">
+          <h1 class="car-24">飲食種類:211飲食</h1><br>
+          <p>料理名稱:<br>
+            蜂蜜芥末烤雞腿麻油雞紫米與
+            普羅旺斯燉菜</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a href="#" target="_blank" class="img_block"><img src="./image/飲食法/211料理/蜂蜜芥末烤雞腿麻油雞紫米與普羅旺斯燉菜.jpg"
+            alt="Masala雞胸高麗菜豆薯飯"></a>
+        <div class="content_block">
+          <h1 class="car-24">飲食種類:得舒飲食</h1><br>
+          <p>料理名稱:<br>
+            Masala雞胸高麗菜豆薯飯</p>
+        </div>
+      </article>
+    </div>
+    </div>
+
+
+    <div class="threemethod">
+      <h2 class="three">飲食種類簡介</h2>
+      <div class="three">
+        <a href="healthfood.html"><img src="./image/飲食法/地中海-大圖.jpg" alt="飲食種類簡介-地中海"></a>
+        <a class="ch2" href="healthfood.html"><img src="./image/飲食法/DASH-大圖.jpg" alt="飲食種類簡介-DASH"></a>
+        <a href="healthfood.html"><img src="./image/飲食法/211健康餐-大圖.jpg" alt="飲食種類簡介-211健康餐"></a>
+      </div>
+    </div>
+
+
+    <div class="Introduction">
+      <div class="gd-h2">
+        <h2 class="gd">好評推薦</h2>
+      </div>
+      <div class="div-people">
+        <div class="people">
+          <p class="p-24">小劉 年齡:32歲<br><br>
+            有時候工作忙碌來不及煮飯，外食太鹹不能常吃， 就推薦冰箱常備常常好食－健康製作所(好準食) 的減醣健康餐，
+            不需要花時間研究健康食譜、計算熱量，更無須備料、料理，省時省力， 3分鐘快速加熱即食，超級方便，
+            辛苦工作一天，回家馬上就能有美味又健康的晚餐可以享用！！</p>
+        </div>
+        <div class="people">
+          <p class="p-24">阿東 年齡:28歲<br><br>
+            有時候工作忙碌來不及煮飯，外食太鹹不能常吃， 就推薦冰箱常備常常好食－健康製作所(好準食) 的減醣健康餐，
+            不需要花時間研究健康食譜、計算熱量，更無須備料、料理，省時省力， 3分鐘快速加熱即食，超級方便，
+            辛苦工作一天，回家馬上就能有美味又健康的晚餐可以享用！！</p>
+        </div>
+        <div class="people">
+          <p class="p-24">小李 年齡:50歲<br><br>
+            有時候工作忙碌來不及煮飯，外食太鹹不能常吃， 就推薦冰箱常備常常好食－健康製作所(好準食) 的減醣健康餐，
+            不需要花時間研究健康食譜、計算熱量，更無須備料、料理，省時省力， 3分鐘快速加熱即食，超級方便，
+            辛苦工作一天，回家馬上就能有美味又健康的晚餐可以享用！！</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="回到頁首"><i class="fa-solid fa-arrow-up"
+        style="color: #000000;"></i>回到頁首</button>
+
+
+  </main>
+
+
+
+
+  <footer class="footer">
+    <h3 class="ft_h3">聯絡我們</h3>
+    <ul class="footer_list">
+
+      <li class="ft_h3"> <img src="./image/icon/phone.svg" alt="電話:02-1234-5678">
+        <p>電話:02-1234-5678</p>
+      </li>
+      <li class="ft_h3"> <img src="./image/icon/instagram.svg" alt="e-mail:food@gmail.com">
+        <p>e-mail:healthyfood@gmail.com</p>
+      </li>
+      <li class="ft_h3"> <img src="./image/icon/e-mail.svg" alt="Eat_healthy_everyday">
+        <p>Eat_healthy_everyday</p>
+      </li>
+    </ul>
+    <h3 class="reference"> 本網站為緯育TibaMe前端工程師專業技術養成班THD103學員專題作品，本平台僅供學習、展示之用。若有侵權疑慮，您可以私訊 [緯育TibaMe] ，後續會由專人協助處理。
+      參考資源: 常常好食、愛料理、中保無限。
+    </h3>
+  </footer>
+
+  <script>
+
+    let mybutton = document.getElementById("myBtn");
+    window.onscroll = function () { scrollFunction() };
+
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+</body>
+
+</html>
