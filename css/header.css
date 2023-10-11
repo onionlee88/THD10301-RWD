@@ -150,6 +150,11 @@ button.bt-member > a {
   color: rgb(255, 255, 255);
 }
 
+@media (min-width: 1400px) {
+  nav {
+    padding-right: 20%;
+  }
+}
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   nav {
     padding-right: 22%;
